@@ -1,6 +1,5 @@
 <?php
 
-
 //Get Heroku ClearDB connection information
 $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 $cleardb_server = $cleardb_url["host"];
@@ -12,21 +11,7 @@ $query_builder = TRUE;
 // Connect to DB
 $conexion = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db)
 
-
-
-  // $servername = "us-cdbr-east-04.cleardb.com";
-  // $username = "bc5d5f8a1cef56";
-  // $password = "78a9d54e";
-  // $dbname = "hotel";
-
-  // Crea la Conexión
-  // $conexion = mysqli_connect($servername, $username, $password, $dbname);
-
-
-
-
-  
-  // Verifica la Conexión
+// Verifica la Conexión
 /*
   if (!$conexion) {
     die("La Conexión ha fallado: " . mysqli_connect_error());
