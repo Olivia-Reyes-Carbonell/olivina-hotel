@@ -22,9 +22,9 @@
                 }
                 if($usuario) {
                     echo "<li>$usuario</li>";
-                    echo "<li><a href='https://intense-wave-81866.herokuapp.com/inicio.php?logout=1'>log-out</a></li>";
+                    echo "<li><a href='https://olivina.herokuapp.com/inicio.php?logout=1'>log-out</a></li>";
                 } else {
-                    echo "<li><a href='https://intense-wave-81866.herokuapp.com/reservas.php?login=1'>log-in</a></li>";                  
+                    echo "<li><a href='https://olivina.herokuapp.com/reservas.php?login=1'>log-in</a></li>";                  
                 }
             ?>
         </ul>
@@ -32,7 +32,7 @@
 </nav>
 <header>
     <div class="header-title-wrapper">
-        <a href="https://intense-wave-81866.herokuapp.com/inicio.php">
+        <a href="https://olivina.herokuapp.com/inicio.php">
             Gran Hotel Olivina
         </a>
         <br>

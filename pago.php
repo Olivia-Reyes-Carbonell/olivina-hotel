@@ -7,14 +7,14 @@
         $fecha_entrada = $_SESSION["entrada"];
         $fecha_salida = $_SESSION["salida"];
 
-        $url="https://intense-wave-81866.herokuapp.com/servicios/reservar.php?id_cliente=$id_cliente&id_habitaciones=$id_habitaciones&fecha_entrada=$fecha_entrada&fecha_salida=$fecha_salida";
+        $url="https://olivina.herokuapp.com/servicios/reservar.php?id_cliente=$id_cliente&id_habitaciones=$id_habitaciones&fecha_entrada=$fecha_entrada&fecha_salida=$fecha_salida";
        
         $data = json_decode(file_get_contents("$url"), true);
 
         if($data['mensaje'] === 'reservado'){
             $_SESSION["reserva_mensaje"] = "Reserva confirmada";
             session_destroy();
-            header("Location: https://intense-wave-81866.herokuapp.com/inicio.php");
+            header("Location: https://olivina.herokuapp.com/inicio.php");
         } else {
             $_SESSION["reserva_mensaje"] = "No se pudo reservar, intentalo de nuevo";
         }
@@ -37,7 +37,7 @@
 <?php
     // Redirecionar al inicio si el login esta bien
     } else { 
-        header('Location: https://intense-wave-81866.herokuapp.com/inicio.php'); 
+        header('Location: https://olivina.herokuapp.com/inicio.php'); 
     }
 
 ?>

@@ -5,7 +5,7 @@ session_start();
 if(isset($_POST["consultar"])){ 
     $entrada= $_POST["entrada"];
     $salida= $_POST["salida"];
-    $url="https://intense-wave-81866.herokuapp.com/servicios/consultarDisponibilidad.php?entrada=$entrada&salida=$salida";
+    $url="https://olivina.herokuapp.com/servicios/consultarDisponibilidad.php?entrada=$entrada&salida=$salida";
     $data = json_decode(file_get_contents("$url"), true);
 
     $_SESSION['entrada'] = $entrada;
@@ -44,7 +44,7 @@ if(isset($_POST["consultar"])){
         <article>
             <div>
                 <h2 class="med-title"><?php echo $estandar; ?> Habitación Estándar</h2>
-                <a href="https://intense-wave-81866.herokuapp.com/reservas.php?habitacion=estandar">
+                <a href="https://olivina.herokuapp.com/reservas.php?habitacion=estandar">
                     <img src="img/habitacion.jpg" class="foto one">
                 </a>
             </div>
@@ -52,7 +52,7 @@ if(isset($_POST["consultar"])){
         <article>
             <div>
                 <h2 class="med-title"><?php echo $deluxe; ?> Habitación Deluxe</h2>
-                <a href="https://intense-wave-81866.herokuapp.com/reservas.php?habitacion=deluxe">
+                <a href="https://olivina.herokuapp.com/reservas.php?habitacion=deluxe">
                     <img src="img/deluxe.jpg" class="foto one">
                 </a>
             </div>
@@ -60,7 +60,7 @@ if(isset($_POST["consultar"])){
         <article>
             <div>
                 <h2 class="med-title"><?php echo $suite; ?> Habitación Suite Jacuzzi</h2>
-                <a href="https://intense-wave-81866.herokuapp.com/reservas.php?habitacion=suite">
+                <a href="https://olivina.herokuapp.com/reservas.php?habitacion=suite">
                     <img src="img/suite.jpg" class="foto one">
                 </a>
             </div>
